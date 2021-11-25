@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   public isDisabled: boolean = false;
+  public inputText: string = "";
 
   ngOnInit(): void {
   }

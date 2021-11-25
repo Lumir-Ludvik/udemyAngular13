@@ -1,7 +1,10 @@
 <p>servers works!</p>
 <button class="btn btn-primary"
         [disabled]="isDisabled" (click)="onAddServer($event)" >Click me to add server</button>
+<input type="text" [(ngModel)]="inputText">
+<p>{{inputText}}</p>
 <app-server></app-server>
 <!--[] is property binding-->
 <!--() is event binding-->
 <!--$event is reserved key word-->
+<!--[(ngModel)] is two way databinding-->
