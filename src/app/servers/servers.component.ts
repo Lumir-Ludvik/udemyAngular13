@@ -8,14 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   public isDisabled: boolean = false;
   public inputText: string = "";
-
+  public serverCreated: boolean = false;
   ngOnInit(): void {
   }
 
   public onAddServer($event: Event): void {
     console.log($event);
+    this.serverCreated = true;
   }
 
+  public onInputChange(): void {
+    this.serverCreated = false;
+  }
 }
 
 //ng generate component servers

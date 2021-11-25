@@ -1,8 +1,12 @@
 <p>servers works!</p>
 <button class="btn btn-primary"
         [disabled]="isDisabled" (click)="onAddServer($event)" >Click me to add server</button>
-<input type="text" [(ngModel)]="inputText">
+<input type="text" [(ngModel)]="inputText" (change)="onInputChange()">
 <p>{{inputText}}</p>
+<p *ngIf="serverCreated; else noServer">this uses directive from two way data binding {{inputText}}</p>
+  <ng-template #noServer>
+    <p>no server</p>
+  </ng-template>
 <app-server></app-server>
 <!--[] is property binding-->
 <!--() is event binding-->
