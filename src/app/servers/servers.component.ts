@@ -11,6 +11,10 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public onAddServer($event: Event): void {
+    console.log($event);
+  }
+
 }
 
 //ng generate component servers
