@@ -12,7 +12,8 @@ export class CuracidiraComponent {
   newServerName = '';
   newServerContent = '';
 
-  onAddServer() {
+  onAddServer(serverNameInput) {
+    console.log(serverNameInput); // DOM element
     this.serverCreated.emit({ name: this.newServerName, content: this.newServerContent});
   }
 
