@@ -11,6 +11,20 @@ export class AppComponent {
     { type: 'blueprint', name: 'testeros', content: 'idk just work dammit'}
   ];
 
+  onServerAdded($event: { name: string, content: string }) {
+    this.serverElements.push({
+      type: 'server',
+      name: $event.name,
+      content: $event.content
+    });
+  }
 
+  onBlueprintAdded($event: { name: string, content: string }) {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: $event.name,
+      content: $event.content
+    });
+  }
 
 }
